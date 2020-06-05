@@ -1,7 +1,7 @@
 ---
 toc: false
 layout: post
-description: A paper describing the motivations and functions of Tabletoolz.
+description: A paper describing the motivations and functions of the Tabletoolz library.
 categories: [markdown, paper, data manipulation]
 title: Tabletoolz
 ---
