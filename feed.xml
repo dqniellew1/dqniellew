@@ -1,9 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="https://dqniellew1.github.io/dqniellew.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://dqniellew1.github.io/dqniellew.github.io/" rel="alternate" type="text/html" /><updated>2020-06-05T14:06:30-05:00</updated><id>https://dqniellew1.github.io/dqniellew.github.io/feed.xml</id><title type="html">Daniel’s blog</title><subtitle>A data science blog</subtitle><entry><title type="html">Tabletoolz</title><link href="https://dqniellew1.github.io/dqniellew.github.io/markdown/2020/06/05/Tabletoolz.html" rel="alternate" type="text/html" title="Tabletoolz" /><published>2020-06-05T00:00:00-05:00</published><updated>2020-06-05T00:00:00-05:00</updated><id>https://dqniellew1.github.io/dqniellew.github.io/markdown/2020/06/05/Tabletoolz</id><content type="html" xml:base="https://dqniellew1.github.io/dqniellew.github.io/markdown/2020/06/05/Tabletoolz.html">&lt;h1 id=&quot;research-topic&quot;&gt;Research topic:&lt;/h1&gt;
-
-&lt;h1 id=&quot;implementing-sql-for-tabletoolz&quot;&gt;Implementing SQL for TableToolz&lt;/h1&gt;
-
-&lt;h1 id=&quot;name-daniel-lew&quot;&gt;Name: Daniel Lew&lt;/h1&gt;
-
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="https://dqniellew1.github.io/dqniellew.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://dqniellew1.github.io/dqniellew.github.io/" rel="alternate" type="text/html" /><updated>2020-06-05T14:15:16-05:00</updated><id>https://dqniellew1.github.io/dqniellew.github.io/feed.xml</id><title type="html">Daniel’s blog</title><subtitle>A data science blog</subtitle><entry><title type="html">Tabletoolz</title><link href="https://dqniellew1.github.io/dqniellew.github.io/markdown/paper/data%20manipulation/2020/06/05/Tabletoolz.html" rel="alternate" type="text/html" title="Tabletoolz" /><published>2020-06-05T00:00:00-05:00</published><updated>2020-06-05T00:00:00-05:00</updated><id>https://dqniellew1.github.io/dqniellew.github.io/markdown/paper/data%20manipulation/2020/06/05/Tabletoolz</id><content type="html" xml:base="https://dqniellew1.github.io/dqniellew.github.io/markdown/paper/data%20manipulation/2020/06/05/Tabletoolz.html">&lt;h1 id=&quot;implementing-tabletoolz-for-sqlalchemy&quot;&gt;Implementing Tabletoolz for SqlAlchemy&lt;/h1&gt;
 &lt;h2 id=&quot;abstract&quot;&gt;Abstract&lt;/h2&gt;
 
 &lt;p&gt;Tabletoolz is a python library which provides users with data manipulation approaches used in R’s Dplyr to manipulate tables in SQL and Pyspark. It aims to provide an experience where a user can use R’s Dplyr approach for data manipulation in Python. This paper outlines methods of how this package was implemented accompanied by results of the objective achieved. If a user has used Dplyr, is familiar with its piping capabilities to chain functions together and is looking to work with SQL tables in Python, this is the library to check out!&lt;/p&gt;
@@ -22,7 +17,7 @@
 
 &lt;p&gt;To get started, I had to understand what I was working with. The libraries that were available to me were Python and SqlAlchemy. SqlAlchemy is the Python SQL toolkit that gives application developers the full power and flexibility of SQL. As per the SqlAlchemy documentation, “It provides a full suite of well-known enterprise-level persistence patterns, designed for efficient and high-performing database access, adapted into a simple and Pythonic domain language.” Due to the fact that most of the foundational code was already build, my role was to complete the library with functional functions of data manipulation. Below is a figure describing the process.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;images/2020-06-05-Tabletoolz/media/image1.png&quot; alt=&quot;A close up of a sign Description automatically generated&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;images/2020-06-05-Tabletoolz//media/image1.png&quot; alt=&quot;A close up of a sign Description automatically generated&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Figure Project cycle&lt;/p&gt;
 
@@ -52,7 +47,7 @@
 
 &lt;p&gt;The third and final objective is to “write tests”. The methods used for testing are asserting whether the results are the same if one were to do it in pandas (asserting data frames), trying inputs of different data types to break the function and raising exceptions if the data type is not compatible with the function. I implemented several scenarios in Figure 4. The first function, test_rename, takes the response function and tests it to see whether its output matches that of the operation if done in the same way using the Python Pandas library. The second function, test_rename_exception, is to test the outcomes of using different types of inputs to see which inputs are not compatible with the function. The inputs that crash the function may have a different data type that is not supported by the function; therefore, we would have to account for these cases during documentation.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;images/2020-06-05-Tabletoolz/media/image4.png&quot; alt=&quot;A screenshot of a social media post Description automatically generated&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;images/2020-06-05-Tabletoolz//media/image4.png&quot; alt=&quot;A screenshot of a social media post Description automatically generated&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Figure 4 Sample test cases&lt;/p&gt;
 
@@ -60,19 +55,19 @@
 
 &lt;p&gt;After going through the results of the project, I will discuss how the package can be used in a setting where it might be used. For example, we are working with a “Car Options” table that contains information about the options that can be modified onto your car. Say we would like to compute the average of each option. First we would have to import the libraries needed which are TableToolz and SqlAlchemy as shown in Figure 6.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;images/2020-06-05-Tabletoolz/media/image5.png&quot; alt=&quot;A screenshot of a social media post Description automatically generated&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;images/2020-06-05-Tabletoolz//media/image5.png&quot; alt=&quot;A screenshot of a social media post Description automatically generated&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Figure 6 Example part 1&lt;/p&gt;
 
 &lt;p&gt;Next, Figure 7 shows best practices in Tabletoolz by first turning tables into a statement as SQL works with statements. Additionally, a user can print the statement to see what it looks like and return the results of the table by turning the statement into a pandas dataframe.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;images/2020-06-05-Tabletoolz/media/image6.png&quot; alt=&quot;A screenshot of a cell phone Description automatically generated&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;images/2020-06-05-Tabletoolz//media/image6.png&quot; alt=&quot;A screenshot of a cell phone Description automatically generated&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Figure 7 Example part 2&lt;/p&gt;
 
 &lt;p&gt;Lastly, Figure 8 shows how we would solve a standard data problem in TableToolz. We first define the Mean function then turn the table into a statement, have the variable that we would like to group by and mutate a new variable to compute its average. Then, we can select the columns that we would like to return and finally return its results by turning it into a pandas dataframe.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;images/2020-06-05-Tabletoolz/media/image7.png&quot; alt=&quot;A screenshot of a cell phone Description automatically generated&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;images/2020-06-05-Tabletoolz//media/image7.png&quot; alt=&quot;A screenshot of a cell phone Description automatically generated&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Figure 8 Example part 3&lt;/p&gt;
 
@@ -123,9 +118,9 @@
 
 &lt;h3 id=&quot;testing&quot;&gt;Testing&lt;/h3&gt;
 
-&lt;p&gt;&lt;img src=&quot;images/2020-06-05-Tabletoolz/media/image14.png&quot; alt=&quot;A screenshot of a cell phone Description automatically generated&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;images/2020-06-05-Tabletoolz//media/image14.png&quot; alt=&quot;A screenshot of a cell phone Description automatically generated&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;images/2020-06-05-Tabletoolz/media/image15.png&quot; alt=&quot;A screenshot of a cell phone Description automatically generated&quot; /&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">Research topic:</summary></entry><entry><title type="html">Fastpages Notebook Blog Post</title><link href="https://dqniellew1.github.io/dqniellew.github.io/jupyter/2020/02/20/test.html" rel="alternate" type="text/html" title="Fastpages Notebook Blog Post" /><published>2020-02-20T00:00:00-06:00</published><updated>2020-02-20T00:00:00-06:00</updated><id>https://dqniellew1.github.io/dqniellew.github.io/jupyter/2020/02/20/test</id><content type="html" xml:base="https://dqniellew1.github.io/dqniellew.github.io/jupyter/2020/02/20/test.html">&lt;!--
+&lt;p&gt;&lt;img src=&quot;images/2020-06-05-Tabletoolz//media/image15.png&quot; alt=&quot;A screenshot of a cell phone Description automatically generated&quot; /&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">Implementing Tabletoolz for SqlAlchemy Abstract</summary></entry><entry><title type="html">Fastpages Notebook Blog Post</title><link href="https://dqniellew1.github.io/dqniellew.github.io/jupyter/2020/02/20/test.html" rel="alternate" type="text/html" title="Fastpages Notebook Blog Post" /><published>2020-02-20T00:00:00-06:00</published><updated>2020-02-20T00:00:00-06:00</updated><id>https://dqniellew1.github.io/dqniellew.github.io/jupyter/2020/02/20/test</id><content type="html" xml:base="https://dqniellew1.github.io/dqniellew.github.io/jupyter/2020/02/20/test.html">&lt;!--
 #################################################
 ### THIS FILE WAS AUTOGENERATED! DO NOT EDIT! ###
 #################################################
