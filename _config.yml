@@ -40,7 +40,7 @@ baseurl: "/dqniellew.github.io" # the subpath of your site, e.g. "/blog".
 minima:
   social_links:
     twitter: 
-    github: https://github.com/dqniellew1
+    github: dqniellew1
 
 # Set this to true to get LaTeX math equation support
 use_math: 
