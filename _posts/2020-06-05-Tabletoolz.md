@@ -1,3 +1,10 @@
+---
+toc: true
+layout: post
+description: A paper describing the motivations and functions of Tabletoolz.
+categories: [markdown]
+title: Tabletoolz
+---
 # Research topic: 
 
 # Implementing SQL for TableToolz
@@ -22,7 +29,7 @@ With Tabletoolz, we wanted to improve the tools available in python data managem
 
 To get started, I had to understand what I was working with. The libraries that were available to me were Python and SqlAlchemy. SqlAlchemy is the Python SQL toolkit that gives application developers the full power and flexibility of SQL. As per the SqlAlchemy documentation, “It provides a full suite of well-known enterprise-level persistence patterns, designed for efficient and high-performing database access, adapted into a simple and Pythonic domain language.” Due to the fact that most of the foundational code was already build, my role was to complete the library with functional functions of data manipulation. Below is a figure describing the process.
 
-![A close up of a sign Description automatically generated](2020-06-05-Tabletoolz/media/image1.png)
+![A close up of a sign Description automatically generated](images/2020-06-05-Tabletoolz/media/image1.png)
 
 Figure Project cycle
 
@@ -48,7 +55,7 @@ Figure 3 Helper functions used in TableToolz
 
 The third and final objective is to “write tests”. The methods used for testing are asserting whether the results are the same if one were to do it in pandas (asserting data frames), trying inputs of different data types to break the function and raising exceptions if the data type is not compatible with the function. I implemented several scenarios in Figure 4. The first function, test\_rename, takes the response function and tests it to see whether its output matches that of the operation if done in the same way using the Python Pandas library. The second function, test\_rename\_exception, is to test the outcomes of using different types of inputs to see which inputs are not compatible with the function. The inputs that crash the function may have a different data type that is not supported by the function; therefore, we would have to account for these cases during documentation.
 
-![A screenshot of a social media post Description automatically generated](2020-06-05-Tabletoolz/media/image4.png)
+![A screenshot of a social media post Description automatically generated](images/2020-06-05-Tabletoolz/media/image4.png)
 
 Figure 4 Sample test cases
 
@@ -56,19 +63,19 @@ Figure 4 Sample test cases
 
 After going through the results of the project, I will discuss how the package can be used in a setting where it might be used. For example, we are working with a “Car Options” table that contains information about the options that can be modified onto your car. Say we would like to compute the average of each option. First we would have to import the libraries needed which are TableToolz and SqlAlchemy as shown in Figure 6.
 
-![A screenshot of a social media post Description automatically generated](2020-06-05-Tabletoolz/media/image5.png)
+![A screenshot of a social media post Description automatically generated](images/2020-06-05-Tabletoolz/media/image5.png)
 
 Figure 6 Example part 1
 
 Next, Figure 7 shows best practices in Tabletoolz by first turning tables into a statement as SQL works with statements. Additionally, a user can print the statement to see what it looks like and return the results of the table by turning the statement into a pandas dataframe.
 
-![A screenshot of a cell phone Description automatically generated](2020-06-05-Tabletoolz/media/image6.png)
+![A screenshot of a cell phone Description automatically generated](images/2020-06-05-Tabletoolz/media/image6.png)
 
 Figure 7 Example part 2
 
 Lastly, Figure 8 shows how we would solve a standard data problem in TableToolz. We first define the Mean function then turn the table into a statement, have the variable that we would like to group by and mutate a new variable to compute its average. Then, we can select the columns that we would like to return and finally return its results by turning it into a pandas dataframe.
 
-![A screenshot of a cell phone Description automatically generated](2020-06-05-Tabletoolz/media/image7.png)
+![A screenshot of a cell phone Description automatically generated](images/2020-06-05-Tabletoolz/media/image7.png)
 
 Figure 8 Example part 3
 
@@ -110,6 +117,6 @@ Python <https://www.python.org/>
 
 ### Testing
 
-![A screenshot of a cell phone Description automatically generated](2020-06-05-Tabletoolz/media/image14.png)
+![A screenshot of a cell phone Description automatically generated](images/2020-06-05-Tabletoolz/media/image14.png)
 
-![A screenshot of a cell phone Description automatically generated](2020-06-05-Tabletoolz/media/image15.png)
+![A screenshot of a cell phone Description automatically generated](images/2020-06-05-Tabletoolz/media/image15.png)
