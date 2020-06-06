@@ -2,7 +2,7 @@
 toc: false
 layout: post
 description: A paper describing the motivations and functions of the Tabletoolz library.
-categories: [markdown, paper, data manipulation]
+categories: [markdown, paper, data manipulation, projects]
 title: Tabletoolz
 ---
 
@@ -25,7 +25,7 @@ With Tabletoolz, we wanted to improve the tools available in python data managem
 
 To get started, I had to understand what I was working with. The libraries that were available to me were Python and SqlAlchemy. SqlAlchemy is the Python SQL toolkit that gives application developers the full power and flexibility of SQL. As per the SqlAlchemy documentation, “It provides a full suite of well-known enterprise-level persistence patterns, designed for efficient and high-performing database access, adapted into a simple and Pythonic domain language.” Due to the fact that most of the foundational code was already build, my role was to complete the library with functional functions of data manipulation. Below is a figure describing the process.
 
-![Project cycle](/images/2020-06-05-Tabletoolz//media/image1.png)
+![Project cycle](/images/2020-06-05-Tabletoolz/media/image1.png)
 
 
 It all starts with an idea of what the function does. Take for example the select function. It chooses variables from the table and keeps only the variables chosen. I then check to see if SqlAlchemy already has that implemented. If it does, then a wrapper function goes on top of the pre-existing function. A wrapper function is composed of a decorator like @pipeable (this gives the function capabilities to pipe like R’s Dplyr) and some code tweaks to the function to make it compatible with the library. After the code works, it goes through testing to see if it really works. Testing involves searching for edge cases to break the function. This ensures that the function is robust and accounts for all foreseeable mistakes that a user makes. If everything works as intended, the code can be documented. The docstring describes what the function does. For every function coded, a docstring is written for it. It describes what the functions does, inputs that go into the functions and outputs, alongside types that should be used. If in an event that the code does not work, I go back to the drawing board and draw up new ideas and go through the process again.
@@ -37,36 +37,36 @@ In this section, I will layout the three outcomes achieved in the project. The f
 ### Functions
 
   - Arrange changes the ordering of the rows.
-![Arrange function from TableToolz](/images/2020-06-05-Tabletoolz//media/arrange.png)
+![Arrange function from TableToolz](/images/2020-06-05-Tabletoolz/media/arrange.png)
 
 
 ### Helper functions 
 
 > On top of writing functions, one important aspect I would like to highlight is writing helper functions which provides some useful functionality to complement the main functions within the library. Figure 3 shows examples of helper functions written for the library. The first function intersperse aids the unite function in adding a column separator that unites each column. The following two functions get\_onclause\_col and table\_check are preliminary checks to make sure joins can be performed on tables.
 
-![Helper functions used in TableToolz](/images/2020-06-05-Tabletoolz//media/helper.png)
+![Helper functions used in TableToolz](/images/2020-06-05-Tabletoolz/media/helper.png)
 
 ### Writing tests
 
 The third and final objective is to “write tests”. The methods used for testing are asserting whether the results are the same if one were to do it in pandas (asserting data frames), trying inputs of different data types to break the function and raising exceptions if the data type is not compatible with the function. I implemented several scenarios in Figure 4. The first function, test\_rename, takes the response function and tests it to see whether its output matches that of the operation if done in the same way using the Python Pandas library. The second function, test\_rename\_exception, is to test the outcomes of using different types of inputs to see which inputs are not compatible with the function. The inputs that crash the function may have a different data type that is not supported by the function; therefore, we would have to account for these cases during documentation.
 
-![Sample test cases](/images/2020-06-05-Tabletoolz//media/image4.png)
+![Sample test cases](/images/2020-06-05-Tabletoolz/media/image4.png)
 
 ## Discussion
 
 After going through the results of the project, I will discuss how the package can be used in a setting where it might be used. For example, we are working with a “Car Options” table that contains information about the options that can be modified onto your car. Say we would like to compute the average of each option. First we would have to import the libraries needed which are TableToolz and SqlAlchemy as shown in Figure 6.
 
-![Example part 1](/images/2020-06-05-Tabletoolz//media/image5.png)
+![Example part 1](/images/2020-06-05-Tabletoolz/media/image5.png)
 
 
 Next, Figure 7 shows best practices in Tabletoolz by first turning tables into a statement as SQL works with statements. Additionally, a user can print the statement to see what it looks like and return the results of the table by turning the statement into a pandas dataframe.
 
-![Example part 2](/images/2020-06-05-Tabletoolz//media/image6.png)
+![Example part 2](/images/2020-06-05-Tabletoolz/media/image6.png)
 
 
 Lastly, Figure 8 shows how we would solve a standard data problem in TableToolz. We first define the Mean function then turn the table into a statement, have the variable that we would like to group by and mutate a new variable to compute its average. Then, we can select the columns that we would like to return and finally return its results by turning it into a pandas dataframe.
 
-![Example part 3](/images/2020-06-05-Tabletoolz//media/image7.png)
+![Example part 3](/images/2020-06-05-Tabletoolz/media/image7.png)
 
 
 ## Conclusion
@@ -94,25 +94,25 @@ Python <https://www.python.org/>
 ### Functions
 
   - Drop, drops columns from the data frame.
-![Drop function](/images/2020-06-05-Tabletoolz//media/drop.png)
+![Drop function](/images/2020-06-05-Tabletoolz/media/drop.png)
 
   - Group-by allows operations to be performed by “group”
-![Group-by function](/images/2020-06-05-Tabletoolz//media/group_by.png)
+![Group-by function](/images/2020-06-05-Tabletoolz/media/group_by.png)
 
   - Rename, changes the name of a column.
-![Rename_function](/images/2020-06-05-Tabletoolz//media/rename.png)
+![Rename_function](/images/2020-06-05-Tabletoolz/media/rename.png)
 
   - Unite, concatenates columns together.
-![Unite function](/images/2020-06-05-Tabletoolz//media/unite.png)
+![Unite function](/images/2020-06-05-Tabletoolz/media/unite.png)
 
   - Inner join joins tables using the inner join method.
-![Inner join function](/images/2020-06-05-Tabletoolz//media/inner.png)
+![Inner join function](/images/2020-06-05-Tabletoolz/media/inner.png)
 
   - Left join joins tables using the left join method.
-  ![Left join function](/images/2020-06-05-Tabletoolz//media/left.png)
+  ![Left join function](/images/2020-06-05-Tabletoolz/media/left.png)
 
 ### Testing
 
-![Test functions](/images/2020-06-05-Tabletoolz//media/test1.png)
+![Test functions](/images/2020-06-05-Tabletoolz/media/test1.png)
 
-![Test functions](/images/2020-06-05-Tabletoolz//media/test2.png)
+![Test functions](/images/2020-06-05-Tabletoolz/media/test2.png)
