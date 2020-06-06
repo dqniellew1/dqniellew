@@ -12,7 +12,7 @@ This space will be used to write about my projects, experiences, and topics surr
 ## Timeline:
 - Winona State University (August, 2017 - May 2020) (student) <br />
 <br />
-[GitHub](https://github.com/dqniellew1/) | [LinkedIn](https://www.linkedin.com/in/daniel-lew-1a358bc/) | [Email](mailto:dqniellew@gmail.com)
+[GitHub](https://github.com/dqniellew1/) | [LinkedIn](https://www.linkedin.com/in/daniel-lew-1a358bc/) | [Email(mailto:dqniellew@gmail.com)
 
 
 
